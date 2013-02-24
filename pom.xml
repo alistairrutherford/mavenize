@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		 
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.netthreads</groupId>
+	<artifactId>mavenize</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Mavenize Tool</name>
+	<url>http://www.netthreads.co.uk</url>
+	<inceptionYear>2012</inceptionYear>
+  
+	<licenses>
+		<license>
+		  <name>Apache 2.0</name>
+		  <url>http://www.netthreads.co.uk/mavenize</url>
+		</license>
+	</licenses>
+  
+	<developers>
+		<developer>
+		<name>Alistair Rutherford</name>
+		<id>arutherford</id>
+		<email>alistair.rutherford@gmail.com</email>
+		<organization>Netthreads</organization>
+		<roles>
+			<role>All</role>
+		</roles>
+		<timezone>0</timezone>
+		</developer>
+	</developers>
+  
+	<organization>
+		<name>netthreads</name>
+	</organization>
+
+	<properties>
+        <svn-server>home-server</svn-server>
+        <junit-version>4.5</junit-version>
+	</properties>
+	
+	<scm>
+		<connection>scm:svn:http://${svn-server}/development/java/mavenize</connection>
+		<developerConnection>scm:svn:http://${svn-server}/development/java/mavenize</developerConnection>
+		<url>scm:svn:http://${svn-server}/development/java/mavenize</url>
+	</scm>
+  
+	<modules>
+		<module>mavenize-fx</module>
+		<module>mavenize-core</module>
+	</modules>
+
+	<build>
+		<pluginManagement>
+		   <plugins>
+		     <plugin>
+		       <groupId>org.apache.maven.plugins</groupId>
+		       <artifactId>maven-compiler-plugin</artifactId>
+		       <configuration>
+		         <source>1.6</source>
+		         <target>1.6</target>
+		       </configuration>
+		     </plugin>
+			 
+			 <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+				<tagBase>scm:svn:http://${svn-server}/tag/mavenize</tagBase>
+				</configuration>
+			 </plugin>
+			 
+		   </plugins>
+		 
+		</pluginManagement>
+		       
+	</build>
+  
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+  
+</project>

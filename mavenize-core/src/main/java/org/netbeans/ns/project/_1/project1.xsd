@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.netbeans.org/ns/project/1" xmlns:project="http://www.netbeans.org/ns/project/1" xmlns:n="http://www.netbeans.org/ns/nb-module-project/3">
+  <xs:import namespace="http://www.netbeans.org/ns/nb-module-project/3" schemaLocation="project.xsd"/>
+  <xs:element name="project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="project:type"/>
+        <xs:element ref="project:configuration"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type" type="xs:string"/>
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="n:data"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

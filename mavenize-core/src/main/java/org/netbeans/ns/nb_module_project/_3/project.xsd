@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.netbeans.org/ns/nb-module-project/3" xmlns:project="http://www.netbeans.org/ns/project/1" xmlns:n="http://www.netbeans.org/ns/nb-module-project/3">
+  <xs:import namespace="http://www.netbeans.org/ns/project/1" schemaLocation="project1.xsd"/>
+  <xs:element name="data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="n:code-name-base"/>
+        <xs:element ref="n:suite-component"/>
+        <xs:element ref="n:module-dependencies"/>
+        <xs:element ref="n:public-packages"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="suite-component">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="module-dependencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="n:dependency"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dependency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="n:code-name-base"/>
+        <xs:element ref="n:build-prerequisite"/>
+        <xs:element ref="n:compile-dependency"/>
+        <xs:element ref="n:run-dependency"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="build-prerequisite">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="compile-dependency">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="run-dependency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="n:specification-version"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specification-version" type="xs:NMTOKEN"/>
+  <xs:element name="public-packages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="n:package"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="package" type="xs:NCName"/>
+  <xs:element name="code-name-base" type="xs:NCName"/>
+</xs:schema>

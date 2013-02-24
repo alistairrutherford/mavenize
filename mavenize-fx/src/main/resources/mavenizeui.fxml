@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="502.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.netthreads.javafx.mavenize.controller.MavenizeFXController">
+  <children>
+    <VBox id="VBox" alignment="CENTER" layoutY="22.0" prefWidth="362.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="88.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER" prefWidth="285.0" spacing="5.0">
+          <children>
+            <Label graphicTextGap="4.0" prefWidth="40.0" text="Source" />
+            <TextField fx:id="sourceInput" prefWidth="281.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="sourceButton" mnemonicParsing="false" onAction="#sourceButtonAction" text="Browse" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" prefWidth="285.0" spacing="5.0">
+          <children>
+            <Label prefWidth="40.0" text="Target" />
+            <TextField fx:id="targetInput" prefWidth="225.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="targetButton" mnemonicParsing="false" onAction="#targetButtonAction" text="Browse" />
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER_LEFT" prefWidth="112.0" spacing="5.0">
+          <children>
+            <Label alignment="CENTER" text="Version" />
+            <TextField fx:id="versionInput" prefWidth="201.0" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER_RIGHT" text="Package" />
+            <ComboBox fx:id="packageCombo" prefHeight="21.0" prefWidth="59.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+    <Button fx:id="activateButton" layoutY="22.0" mnemonicParsing="false" onAction="#activateButtonAction" prefHeight="49.0" prefWidth="64.0" text="" AnchorPane.rightAnchor="19.0" />
+    <TableView fx:id="dataTable" editable="false" prefHeight="287.0" prefWidth="497.0" tableMenuButtonVisible="false" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="120.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="groupId" fx:id="groupIdCol" />
+        <TableColumn prefWidth="75.0" text="artifactId" fx:id="artifactIdCol" />
+        <TableColumn prefWidth="75.0" text="File Path" fx:id="filePathCol" />
+        <TableColumn prefWidth="75.0" text="File Count" fx:id="fileCountCol" />
+        <TableColumn prefWidth="75.0" text="Status" fx:id="statusCol" />
+        <TableColumn prefWidth="75.0" text="Working" fx:id="workingCol" />
+      </columns>
+    </TableView>
+    <HBox id="HBox" alignment="CENTER_RIGHT" layoutX="14.0" spacing="5.0" AnchorPane.bottomAnchor="9.0">
+      <children>
+        <Label fx:id="versionLabel" prefWidth="225.0" text="Mavenize - 1.0.0" />
+        <Hyperlink fx:id="weblinkLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="241.0" text="www.netthreads.co.uk" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>
