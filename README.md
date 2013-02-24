@@ -14,6 +14,8 @@ mavenize-fx
 
 JavaFX base user interface.
 
+![User interface](https://github.com/alistairrutherford/images/raw/master/mavenizefx.png)
+
 You will need to use the maven-javafx-plug.
 
 It uses the java-fx-maven plugin from here https://github.com/zonski/javafx-maven-plugin/wiki
