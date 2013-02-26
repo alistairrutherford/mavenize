@@ -44,18 +44,18 @@ import org.slf4j.LoggerFactory;
  * The "NetBeans" module pom generator has added ability to read the project definition files and make a stab at
  * dependencies.
  * 
- * @author Alistair
  */
 public class NetBeansPomGenerator extends DefaultPomGenerator
 {
-
 	private static Logger logger = LoggerFactory.getLogger(NetBeansPomGenerator.class);
+	
 	private static final String PROJECT_DIR = "nbproject";
 	private static final String PROJECT_FILE = "project.xml";
 	private static final String PACKAGING_TYPE = "nbm";
 	private static final String NETBEANS_REPO = "http://bits.netbeans.org/maven2/";
 	private static final String NETBEANS_REPO_ID = "netbeans";
 	private static final String NETBEANS_REPO_NAME = "netbeans";
+	
 	/**
 	 * When trying to generate the appropriate groupid and artifactid for a dependency we are going to split the
 	 * "code-name-base" from the project.xml in two along this division from the right to left. So something like
@@ -63,7 +63,6 @@ public class NetBeansPomGenerator extends DefaultPomGenerator
 	 * work in every case but it's a start.
 	 */
 	private static final int NETBEANS_DEPENDENCY_GROUP_ARTIFACT_SPLIT = 2;
-	private static final int NETBEANS_DEPENDENCY_GROUP_PACKAGE_SPLIT = 2;
 
 	/**
 	 * NetBeans specific processing.
