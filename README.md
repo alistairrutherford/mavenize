@@ -21,8 +21,15 @@ It uses the java-fx-maven plugin from here https://github.com/zonski/javafx-mave
 
 You will need to follow the instruction on the plugin page to ensure JavaFX is visible to the build.
 
+Once you have JavaFX hooked into maven:
+
+- go to the mavenize-fx folder
+- execute "mvn jfx:build-jar" to build an executable jar.
+
 License
 --------
+[Copyright - Alistair Rutherford 2013 - www.netthreads.co.uk]
+
 Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
