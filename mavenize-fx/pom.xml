@@ -15,18 +15,24 @@
 	<packaging>jar</packaging>
 	<name>Mavenize FX UI</name>
 
+    <organization>
+        <!-- Used as the 'Vendor' for JNLP generation -->
+        <name>www.netthreads.co.uk</name>
+    </organization>
+	
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+	
     <properties>
         <svn-server>home-server</svn-server>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit-version>4.5</junit-version>
         <slf4j-version>1.6.6</slf4j-version>
     </properties>
-
-	<scm>
-		<connection>scm:svn:https://${svn-server}/svn/trunk/mavenize-fx</connection>
-		<developerConnection>scm:svn:https://${svn-server}/svn/trunk/mavenize-fx</developerConnection>
-		<url>scm:svn:https://${svn-server}/svn/trunk/mavenize-fx</url>
-	</scm>
   	
 	<build>
 		<pluginManagement>
@@ -35,7 +41,7 @@
 	            <plugin>
 	                <groupId>com.zenjava</groupId>
 	                <artifactId>javafx-maven-plugin</artifactId>
-	                <version>1.3</version>
+	                <version>1.5</version>
 	                <configuration>
 	
 				         <mainClass>com.netthreads.javafx.mavenize.MavenizeFX</mainClass>
@@ -82,18 +88,5 @@
 		 -->
 
 	</dependencies>
-	
-	<distributionManagement>
-		<repository>
-			<id>central</id>
-			<name>Releases</name>
-			<url>https://${svn-server}/svn/release/mavenize-fx</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>Snapshots</name>
-			<url>https://${svn-server}/svn/snapshot/mavenize-fx</url>
-		</snapshotRepository>
-	</distributionManagement>
 	
 </project>
