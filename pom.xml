@@ -38,15 +38,8 @@
 	</organization>
 
 	<properties>
-        <svn-server>home-server</svn-server>
         <junit-version>4.5</junit-version>
 	</properties>
-	
-	<scm>
-		<connection>scm:svn:http://${svn-server}/development/java/mavenize</connection>
-		<developerConnection>scm:svn:http://${svn-server}/development/java/mavenize</developerConnection>
-		<url>scm:svn:http://${svn-server}/development/java/mavenize</url>
-	</scm>
   
 	<modules>
 		<module>mavenize-fx</module>
@@ -55,24 +48,16 @@
 
 	<build>
 		<pluginManagement>
+		
 		   <plugins>
 		     <plugin>
 		       <groupId>org.apache.maven.plugins</groupId>
 		       <artifactId>maven-compiler-plugin</artifactId>
 		       <configuration>
-		         <source>1.6</source>
-		         <target>1.6</target>
+		         <source>1.7</source>
+		         <target>1.7</target>
 		       </configuration>
 		     </plugin>
-			 
-			 <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-				<tagBase>scm:svn:http://${svn-server}/tag/mavenize</tagBase>
-				</configuration>
-			 </plugin>
-			 
 		   </plugins>
 		 
 		</pluginManagement>
