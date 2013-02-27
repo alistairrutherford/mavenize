@@ -1,13 +1,13 @@
 mavenize
 ========
 
-A tool which will attempt to "mavenise' any number of java projects. 
+A tool which will attempt to "mavenize' any number of java projects. 
 
 
 mavenize-core
 -------------
 
-Core library which does the mavenizing process. Also builds to a command line launchable JAR file.
+Core library which does the mavenizing process. As well as a library it also builds to a command line launchable JAR file.
 
 mavenize-fx
 -----------
