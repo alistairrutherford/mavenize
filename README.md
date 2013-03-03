@@ -16,7 +16,7 @@ JavaFX based user interface.
 
 You can download an executable JAR for this from https://code.google.com/p/mavenize-tool/downloads/list
 
-![User interface](https://github.com/alistairrutherford/images/raw/master/mavenizefx.png)
+![User interface](https://github.com/alistairrutherford/images/raw/master/mavenizefxA.png)
 
 
 It uses the java-fx-maven plugin from here https://github.com/zonski/javafx-maven-plugin/wiki
